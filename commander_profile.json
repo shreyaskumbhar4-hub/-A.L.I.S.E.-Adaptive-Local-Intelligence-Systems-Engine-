@@ -1,0 +1,11 @@
+{
+    "commander_name": "Rey",
+    "primary_language": "English",
+    "known_languages": ["English", "Hindi", "Spanish"],
+    "current_project": "Project Mark-I Core System Upgrade",
+    "coding_preferences": {
+        "preferred_stack": "Python FastAPI and Local Asynchronous Frameworks",
+        "style": "Highly optimized, minimal third-party dependencies"
+    },
+    "humor_tolerance": "MAXIMUM_SARCASM"
+}

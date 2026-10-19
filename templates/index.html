@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A.L.I.S.E. Mainframe Interface</title>
+    <style>
+        :root {
+            --bg-dark: #06090f;
+            --panel-bg: #0d1117;
+            --cyber-cyan: #00f0ff;
+            --user-blue: #58a6ff;
+            --border-color: #21262d;
+            --text-main: #c9d1d9;
+        }
+        body {
+            background-color: var(--bg-dark); color: var(--text-main);
+            font-family: 'Courier New', Courier, monospace; margin: 0; padding: 20px;
+            display: flex; flex-direction: column; align-items: center; justify-content: center; min-height: 100vh;
+        }
+        #mainframe {
+            width: 90%; max-width: 800px; background-color: var(--panel-bg);
+            border: 1px solid var(--border-color); border-radius: 8px; padding: 25px;
+            box-shadow: 0 0 25px rgba(0, 240, 255, 0.08);
+        }
+        h1 { color: var(--cyber-cyan); font-size: 1.4rem; letter-spacing: 3px; text-transform: uppercase; margin: 0 0 20px 0; border-bottom: 1px solid var(--border-color); padding-bottom: 10px; }
+        #visualizer { display: flex; justify-content: center; margin: 20px 0; }
+        .core-orb { width: 60px; height: 60px; border-radius: 50%; background: radial-gradient(circle, var(--cyber-cyan) 0%, rgba(0,0,0,0) 70%); animation: pulse 1.5s infinite ease-in-out; }
+        @keyframes pulse { 0% { transform: scale(0.9); opacity: 0.4; } 50% { transform: scale(1.1); opacity: 0.9; box-shadow: 0 0 25px var(--cyber-cyan); } 100% { transform: scale(0.9); opacity: 0.4; } }
+        #terminal { height: 300px; overflow-y: auto; background-color: #04060a; border: 1px solid var(--border-color); border-radius: 4px; padding: 15px; font-size: 0.9rem; line-height: 1.6; }
+        .entry { margin-bottom: 12px; padding-left: 8px; border-left: 2px solid #30363d; }
+        .user-msg { border-color: var(--user-blue); color: var(--user-blue); }
+        .alise-msg { border-color: var(--cyber-cyan); color: var(--text-main); }
+    </style>
+</head>
+<body>
+<div id="mainframe">
+    <h1>A.L.I.S.E. Multilingual Mainframe v1.0</h1>
+    <div id="visualizer"><div class="core-orb" id="orb"></div></div>
+    <div id="terminal">
+        <div class="entry alise-msg">[A.L.I.S.E.]: Calibration complete. Core repositories synced. Standing by, Sir.</div>
+    </div>
+</div>
+<script>
+    const socket = new WebSocket("ws://localhost:8000/ws");
+    const terminal = document.getElementById("terminal");
+    const orb = document.getElementById("orb");
+    socket.onmessage = function(event) {
+        const payload = JSON.parse(event.data);
+        const div = document.createElement("div");
+        div.classList.add("entry");
+        if (payload.event === "user_input") {
+            div.classList.add("user-msg");
+            div.innerText = `[COMMANDER]: ${payload.text}`;
+            orb.style.background = "radial-gradient(circle, #58a6ff 0%, rgba(0,0,0,0) 70%)";
+        } else {
+            div.classList.add("alise-msg");
+            div.innerText = `[A.L.I.S.E.]: ${payload.text}`;
+            orb.style.background = "radial-gradient(circle, #00f0ff 0%, rgba(0,0,0,0) 70%)";
+        }
+        terminal.appendChild(div);
+        terminal.scrollTop = terminal.scrollHeight;
+    };
+</script>
+</body>
+</html>
