@@ -42,7 +42,7 @@ class AlisePersonalizedEngine:
         self.sample_rate = self.config["audio"]["sample_rate"]
         
         # Load offline Vosk data registers
-        self.vosk_model = Model("model")
+        self.vosk_model = Model(model_name="vosk-model-small-en-us-0.15")
         self.recognizer = KaldiRecognizer(self.vosk_model, self.sample_rate)
         
         self.tts_engine = pyttsx3.init()
@@ -159,7 +159,7 @@ engine = AlisePersonalizedEngine()
 
 @app.get("/", response_class=HTMLResponse)
 async def homepage(request: Request):
-    return templates.TemplateResponse("index.html", {"request": request})
+    return templates.TemplateResponse(request=request, name="index.html")
 
 @app.websocket("/ws")
 async def ws_endpoint(websocket: WebSocket):

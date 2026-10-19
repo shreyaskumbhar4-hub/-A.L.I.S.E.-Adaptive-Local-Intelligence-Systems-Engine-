@@ -1,0 +1,331 @@
+<html lang="en">
+<head>
+
+   <!-- Google tag (gtag.js) -->
+   <script async src="https://www.googletagmanager.com/gtag/js?id=G-V3NP4163XP"></script>
+   <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-V3NP4163XP');
+    </script>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="/favicon.ico">
+    <title>Alpha Cephei Speech Recognition</title>
+
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+
+    <link rel="alternate" hreflang="ru" href="https://alphacephei.com/ru/" />
+    <link rel="alternate" hreflang="en" href="https://alphacephei.com/en/" />
+
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+<body id="page-top">
+
+        <nav class="navbar navbar-expand-md navbar-light fixed-top bg-light" id="mainNav">
+            <div class="container-fluid">
+            <a class="navbar-brand" href="#page-top">
+                <img alt="Logo" src="/img/logo.png">
+            </a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-collapsed" aria-controls="navbar-collapsed" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbar-collapsed">
+                 <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#demo">Demo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#products">Products</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#news">News</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/vosk">Open Source</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/nsh">Research</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#about-page">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/ru/">Рус</a></li>
+                    <li class="nav-item"><a class="nav-link" href="/cn/">中文</a></li>
+                 </ul>
+             </div>
+            </div>
+        </nav>
+
+        <section id="demo">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-4 text-center">
+                    <h3>Speech Recognition</h3>
+                    <p>Our demo recognizes speech from microphone. Requires Google Chrome. Press a button and say something. The result will be displayed on the right.</p>
+                    <button type="submit" class="btn big-btn" id="liveButton" onclick="switchListening()">Try Now</button>
+                </div>
+                <div class="col-6 offset-1">
+                    <textarea class="form-control" id="dialog" rows="11"></textarea>
+                </div>
+            </div>
+        </div>
+        </section>
+
+
+
+        <section id="products">
+          <div class="products-header px-3 py-3 pt-md-5 pb-md-5 mx-auto text-center">
+            <h1 class="hcolor">Products</h1>
+          </div>
+          <div class="container">
+          <div class="row row-cols-1 row-cols-md-3 mb-3 text-center">
+             <div class="col">
+             <div class="card mb-4 shadow">
+                <div class="card-header"><img src="/img/vosk.png" width="100"/><p class="h3">Vosk Open Source</p></div>
+                <div class="card-body">
+                <ul class="list-unstyled">
+                <li>18+ languages</li>
+                <li>works offline</li>
+                <li>mobile and server</li>
+                <li>10 platforms</li>
+                </ul>
+                <a class="btn big-btn products-link" href="/vosk">Download</a>
+                </div>
+              </div>
+              </div>
+              <div class="col">
+              <div class="card mb-4 shadow">
+                <div class="card-header"><img src="/img/vosk_violet.png" width="100"/><p class="h3">Vosk Enterprise</p></div>
+                <div class="card-body">
+                <ul class="list-unstyled">
+                <li>more languages</li>
+                <li>premium accuracy</li>
+                <li>ongoing support</li>
+                <li>technology training</li>
+                </ul>
+                <a class="btn big-btn products-link" href="mailto:contact@alphacephei.com">Contact Us</a>
+                </div>
+              </div>
+              </div>
+              <div class="col">
+              <div class="card mb-4 shadow">
+                <div class="card-header"><img src="/img/vosk_pink.png" width="100"/><p class="h3">Vosk Mobile</p></div>
+                <div class="card-body">
+                <ul class="list-unstyled">
+                <li>more languages</li>
+                <li>efficiency for the edge</li>
+                <li>iOS and Unity</li>
+                <li>ongoing support</li>
+                </ul>
+                <a class="btn big-btn products-link" href="mailto:contact@alphacephei.com">Contact Us</a>
+                </div>
+              </div>
+              </div>
+         </div>
+         </div>
+        </section>
+
+        <section id="news">
+        <div class="container-fluid pt-md-5 pb-md-5" style="background: #d1e9e4;">
+
+            <div class="row pt-md-5 pb-md-5">
+              <div class="col text-center">
+                <h1 class="hcolor">News</h1>
+              </div>
+            </div>
+
+
+
+          <div class="row row-cols-1 row-cols-md-3 mb-3">
+
+
+
+
+             <div class="col">
+                <div class="card mb-4 shadow h-100">
+                <div class="card-body">
+                <h3>Georgian model release</h3>
+
+                <p class="date">2026/05/04</p>
+
+                <p>We released <a href="/vosk/models">Georgian models for Vosk</a></p>
+                </div>
+                </div>
+              </div>
+
+
+
+
+             <div class="col">
+                <div class="card mb-4 shadow h-100">
+                <div class="card-body">
+                <h3>New models release</h3>
+
+                <p class="date">2022/09/13</p>
+
+                <p>We released <a href="/vosk/models">Chinese, Italian and Spanish models for Vosk</a></p>
+                </div>
+                </div>
+              </div>
+
+
+             <div class="col">
+                <div class="card mb-4 shadow h-100">
+                <div class="card-body">
+                <h3>Hindi and Dutch model release</h3>
+
+                <p class="date">2022/03/27</p>
+
+                <p>We released <a href="/vosk/models">Hindi and Dutch models for Vosk</a></p>
+                </div>
+                </div>
+              </div>
+
+
+            </div>
+            <div class="row row-cols-1 row-cols-md-3 mb-3">
+
+
+             <div class="col-8">
+                <div class="card mb-4 shadow h-100">
+                <div class="card-body">
+                <h3>Vosk talk on ClueCon Weekly</h3>
+
+                <p class="date">2022/02/27</p>
+                <p>We presented Vosk updates on ClueCon Weekly.</p>
+                <p>Video available <a href="https://www.youtube.com/watch?v=Seua3xChfvM">here</a></p>
+                </div>
+                </div>
+              </div>
+
+
+             <div class="col">
+                <div class="card mb-4 shadow h-100">
+                <div class="card-body">
+                <h3>Japanese model release</h3>
+
+                <p class="date">2022/01/06</p>
+
+                <p>We released <a href="/vosk/models">Japanese model for Vosk</a></p>
+                </div>
+                </div>
+              </div>
+
+
+
+              <div class="col md-4">
+                <p>
+                <a class="contact-link news-link" href="/en/news.html">More news >></a>
+                </p>
+              </div>
+            </div>
+        </div>
+        </section>
+
+
+        <section id="about-page">
+        <div class="container-fluid">
+
+            <div class="row">
+              <div class="col-sm-8">
+                <h1 class="hcolor text-center">About</h1>
+                <p>
+                  Alpha Cephei primary mission is scientific.
+                  We spent more than 10 years researching speech
+		  production, speech recognition and all related areas.
+		  We have made a significant progress in understanding
+		  the nature of such a marvelous communication method as
+		  speech. 
+		</p>
+		<p>
+		  At the same time we are also the experts in
+		  implementation of the state of the art algorithms in
+		  practical systems. We excelled our capabilities during
+		  numerous projects in many companies around the world. 
+		</p>
+		<p>
+		  We hope you'll find our software, our publications
+		  and thoughts useful.
+                </p>
+              </div>
+
+              <div class="col-sm-4">
+                <img src="/img/about.png">
+              </div>
+
+            </div>
+
+        </div>
+        </section>
+
+        <section id="contact-us-page" style="background: #f2f2f2;">
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col mx-5">
+                <h1 class="hcolor">Contact Us</h1>
+                </div>
+            </div>
+            <!--div class="row justify-content-around m-3">
+              <div class="col-6">
+                <p>Want to get in contact with us? Send us a message by filling out this form or use the appropriate email.</p>
+                <fieldset>
+                     <form name="enq" method="post" action="email/" onsubmit="return validation();">
+                           <div class="form-group">
+                                <label for="exampleInputName1">Name</label>
+                                <input type="text" name="name" class="form-control" id="exampleInputName1" placeholder="Enter name">
+                          </div>
+                          <div class="form-group">
+                                <label for="exampleInputEmail1">Email address</label>
+                                <input type="text" name="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email">
+                           </div>
+                           <div class="form-group">
+                               <label for="exampleInputMessage1">Message</label>
+                               <textarea name="message" class="form-control" input rows="5" placeholder="Enter message"></textarea>
+                           </div>
+                           <div class="actions">
+                               <input type="submit" value="Send" name="submit" id="submitButton" class="btn btn-info pull-right" title="Click here to submit your message!" />
+                           </div>
+                       </form>
+              </fieldset>
+              </div-->
+              <div class="row mt-4">
+                  <div class="col mx-5">
+                  <h4>Telegram</h4>
+                  <p><a class="contact-link" href="https://t.me/speech_recognition">@speech_recognition</a></p>
+                  <h4>Weibo</h4>
+                  <p><a class="contact-link" href="https://weibo.com/alphacephei">@alphacephei</a></p>
+                  </div>
+    
+                  <div class="col mx-5">
+                  <h4>Email</h4>
+                  <p><a class="contact-link" href="mailto:contact@alphacephei.com">contact@alphacephei.com</a></p>
+                  <h4>Twitter</h4>
+                  <p><a class="contact-link" href="https://twitter.com/alphacep">@alphacep</a></p>
+                  </div>
+              </div>
+            </div>
+
+
+        </section>
+
+
+        <footer>
+        <div class="container-fluid" id="footer">
+
+            <div class="row justify-content-between" id="footer">
+               <div class="col-3 my-4">
+                 <a class="text-light" href="#">Privacy</a>
+               </div>
+               <div class="col-3 my-4">
+                 <a class="text-light" href="#">2015-2025 Alpha Cephei Inc.</a>
+               </div>
+            </div>
+
+        </div>
+        </footer>
+
+    <script src="/lib/jquery-1.12.4.min.js"></script>
+    <script src="/lib/bootstrap.min.js"></script>
+    <script src="/lib/dictate.js"></script>
+    <script src="/lib/recorder.js"></script>
+    <script src="/lib/demo.js"></script>
+
+
+
+</body>
+</html>
